@@ -1,0 +1,25 @@
+<%#= form_for(pet) do |f| %>
+  <%#= f.label :name %>
+  <%#= f.text_field :name %>
+  <%#= f.label :address %>
+  <%#= f.text_field :address %>
+  <%#= f.label :species %>
+  <%#= f.text_field :species %>
+  <%#= f.label :found_on %>
+  <%#= f.date_field :found_on %>
+  <%#= f.submit %>
+<%# end %>
+
+<div class="container">
+  <div class="row justify-content-around">
+    <div class="col-6">
+      <%= simple_form_for(pet) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :species %>
+        <%= f.input :found_on %>
+        <%= f.submit 'New Pet', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
